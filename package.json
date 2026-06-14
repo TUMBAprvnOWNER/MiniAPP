@@ -1,0 +1,28 @@
+{
+  "name": "prvn-miniapp",
+  "version": "1.0.0",
+  "description": "PRVN Token Tracker Mini App for Telegram",
+  "main": "bot/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:bot\" \"npm run dev:webapp\"",
+    "dev:bot": "nodemon bot/index.js",
+    "dev:webapp": "cd webapp && npm run dev",
+    "build": "cd webapp && npm run build",
+    "start": "node bot/index.js",
+    "install:all": "npm install && cd webapp && npm install"
+  },
+  "keywords": ["telegram", "bot", "miniapp", "ton", "crypto"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.64.0",
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.2"
+  }
+}
